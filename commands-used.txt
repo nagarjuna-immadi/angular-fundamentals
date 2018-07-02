@@ -1,0 +1,7 @@
+ng new angular-fundamentals
+
+ng serve --open
+
+ng generate module app-routing
+
+npm install bootstarp --save
