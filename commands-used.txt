@@ -7,3 +7,5 @@ ng generate module app-routing
 npm install bootstarp --save
 
 ng generate component index --module="app.module"
+
+ng generate module components-templates

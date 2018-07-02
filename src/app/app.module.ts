@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -17,7 +18,8 @@ import { IndexComponent } from './index/index.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ComponentsTemplatesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
