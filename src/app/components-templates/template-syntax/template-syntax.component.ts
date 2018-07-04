@@ -8,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class TemplateSyntaxComponent implements OnInit {
 
   currentHero = {
-    name: "Steven"
+    name: "Steven",
+    power: 200
   };
+
   heroImageUrl = './assets/images/hero.jpg';
+
+  formNotChanged = true;
+
+  canSave = true;
+  isUnchanged = false;
+  isSpecial = false;
+  
+  classes =  {
+    'saveable': this.canSave,
+    'modified': !this.isUnchanged,
+    'special':  this.isSpecial
+  };
 
   constructor() { }
 
@@ -20,5 +34,7 @@ export class TemplateSyntaxComponent implements OnInit {
   getVal() {
     return 1;
   }
+
+
 
 }
