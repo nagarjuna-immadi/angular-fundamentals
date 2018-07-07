@@ -20,13 +20,27 @@ export class TemplateSyntaxComponent implements OnInit {
   isUnchanged = false;
   isSpecial = false;
   
-  classes =  {
+  classConditions =  {
     'saveable': this.canSave,
     'modified': !this.isUnchanged,
     'special':  this.isSpecial
   };
 
   evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
+
+  noOfColumns = 2;
+
+  actionName = "Save";
+
+  badCurly = 'different bad curly';
+
+  special = true;
+
+  currentStyles = {
+    'font-style':  this.canSave      ? 'italic' : 'normal',
+    'font-weight': !this.isUnchanged ? 'bold'   : 'normal',
+    'font-size':   this.isSpecial    ? '24px'   : '12px'
+  };
 
   constructor() { }
 
