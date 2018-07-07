@@ -58,6 +58,8 @@ export class TemplateSyntaxComponent implements OnInit {
     return this.heroImageUrl;
   }
 
-
+  onSave(event) {
+    console.log(event);
+  }
 
 }

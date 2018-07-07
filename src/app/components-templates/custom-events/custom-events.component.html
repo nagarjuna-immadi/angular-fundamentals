@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let hero of heros">
+    <app-display-hero (deleteHeroEvent)="delete($event)" [hero]="hero"></app-display-hero>
+  </li>
+</ul>
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br>
