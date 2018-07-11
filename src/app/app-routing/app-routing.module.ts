@@ -10,6 +10,7 @@ import { DisplayDataInTemplateComponent } from '../components-templates/display-
 import { DisplayDataInTemplateUrlComponent } from '../components-templates/display-data-in-template-url/display-data-in-template-url.component';
 import { TemplateSyntaxComponent } from '../components-templates/template-syntax/template-syntax.component';
 import { CustomEventsComponent } from '../components-templates/custom-events/custom-events.component';
+import { TwoWayBindingComponent } from '../components-templates/two-way-binding/two-way-binding.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'components-templates/display-data-in-template-url', component:  DisplayDataInTemplateUrlComponent},
   { path: 'components-templates/template-syntax', component:  TemplateSyntaxComponent},
   { path: 'components-templates/template-syntax/custom-events', component:  CustomEventsComponent},
+  { path: 'components-templates/template-syntax/two-way-binding', component:  TwoWayBindingComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
