@@ -137,6 +137,15 @@
 <h6>Safe Navigation Operator:</h6>
 <div>The null hero's name is {{nullHero?.name}}</div>
 
+<br>
+<hr>
+<h6><b>Template Statements</b></h6>
+<div>Template statement allows assignment operator '='</div>
+<div>Hero name: {{currentHero.name}}</div>
+<div><button (click)="currentHero.name = 'David'">Save</button></div>
+<br>
+<div>We can chain the template statements</div>
+<div><button (click)="currentHero.name = 'David';onSave($event)">Save</button></div>
 
 
 

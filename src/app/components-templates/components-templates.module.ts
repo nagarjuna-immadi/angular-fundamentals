@@ -10,12 +10,13 @@ import { CustomEventsComponent } from './custom-events/custom-events.component';
 import { DisplayHeroComponent } from './display-hero/display-hero.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FontSizerComponent } from './font-sizer/font-sizer.component';
+import { HeroBioComponent } from './hero-bio/hero-bio.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent]
 })
 export class ComponentsTemplatesModule { }

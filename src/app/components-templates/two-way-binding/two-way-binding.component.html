@@ -4,8 +4,12 @@
 <app-font-sizer [size]="fontSize" (sizeChange)="fontSize=$event"></app-font-sizer>
 
 <br>
-<div>Two way data binding:</div>
+<div>Two way data binding with [( ... )]</div>
 <app-font-sizer [(size)]="fontSize"></app-font-sizer>
+
+<br>
+<div>Two way data binding with 'bindon-'</div>
+<app-font-sizer bindon-size="fontSize"></app-font-sizer>
 
 <br>
 <hr>
