@@ -32,6 +32,8 @@
 
 <br><br>
 <div>NgModel - Splitted into property and Event binding</div>
-<input
-  [ngModel]="currentHero.name"
-  (ngModelChange)="currentHero.name=$event">
+<input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event">
+
+<br><br>
+<div>NgModel - manipulate the value on change</div>
+<input [ngModel]="currentHero.name" (ngModelChange)="setUpperCase($event)">

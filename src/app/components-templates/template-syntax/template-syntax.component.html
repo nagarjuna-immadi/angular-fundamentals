@@ -125,6 +125,18 @@
 <br><br>
 <input type="text" (keypress)="onSave($event)"/>
 
+<br>
+<hr>
+<h6><b>Template Expression Operators</b></h6>
+<br>
+<h6>Pipe Operator:</h6>
+<div>Hero name: {{currentHero.name | uppercase}}</div>
+<div>{{currentHero | json}}</div>
+
+<br>
+<h6>Safe Navigation Operator:</h6>
+<div>The null hero's name is {{nullHero?.name}}</div>
+
 
 
 

@@ -18,4 +18,8 @@ export class TwoWayBindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  setUpperCase(value) {
+    this.currentHero.name = value.toUpperCase();
+  }
+
 }

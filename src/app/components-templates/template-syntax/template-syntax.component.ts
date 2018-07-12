@@ -42,6 +42,8 @@ export class TemplateSyntaxComponent implements OnInit {
     'font-size':   this.isSpecial    ? '24px'   : '12px'
   };
 
+  nullHero = null;
+
   constructor() { }
 
   ngOnInit() {
