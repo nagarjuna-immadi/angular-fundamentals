@@ -147,6 +147,19 @@
 <div>We can chain the template statements</div>
 <div><button (click)="currentHero.name = 'David';onSave($event)">Save</button></div>
 
+<br>
+<hr>
+<h6><b>Template reference variables ( #hero )</b></h6>
+<form (ngSubmit)="onSubmit(heroForm)" #heroForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name
+      <input class="form-control" name="name" required [(ngModel)]="currentHero.name">
+    </label>
+  </div>
+  <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+</form>
+
+
 
 
 

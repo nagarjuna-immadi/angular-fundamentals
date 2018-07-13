@@ -64,4 +64,7 @@ export class TemplateSyntaxComponent implements OnInit {
     console.log(event);
   }
 
+  onSubmit(heroForm) {
+    console.log(heroForm);
+  }
 }
