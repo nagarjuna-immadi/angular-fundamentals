@@ -1,0 +1,16 @@
+<h6><b>Attribute Directives</b></h6>
+
+<br>
+<h6>appHighlight - With static color:</h6>
+<p appHighlight>Highlight me!</p>
+
+<br>
+<h6>appHighlightV1 - Respond to user-initiated events:</h6>
+<p appHighlightV1>Highlight me!</p>
+
+<br>
+<h6>appHighlightV2 - Pass values into the directive with an @Input data binding:</h6>
+<p appHighlightV2>highlightColor is not passed. So, It would be highlighted with default color(red) specified in directive.</p>
+<p appHighlightV2 [highlightColor]="'orange'">Highlight me in orange.</p>
+<p appHighlightV2 highlightColor="yellow">Highlight me in yellow.</p>
+<p appHighlightV2 [highlightColor]="color">Highlight me in the color specified by component(green)</p>

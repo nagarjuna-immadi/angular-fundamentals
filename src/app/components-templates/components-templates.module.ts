@@ -11,12 +11,16 @@ import { DisplayHeroComponent } from './display-hero/display-hero.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FontSizerComponent } from './font-sizer/font-sizer.component';
 import { HeroBioComponent } from './hero-bio/hero-bio.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { HighlightDirective } from './attribute-directives/highlight.directive';
+import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
+import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive]
 })
 export class ComponentsTemplatesModule { }
