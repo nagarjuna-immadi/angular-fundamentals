@@ -14,3 +14,9 @@
 <p appHighlightV2 [highlightColor]="'orange'">Highlight me in orange.</p>
 <p appHighlightV2 highlightColor="yellow">Highlight me in yellow.</p>
 <p appHighlightV2 [highlightColor]="color">Highlight me in the color specified by component(green)</p>
+
+<br>
+<h6>appHighlightV3 - Bind to an @Input alias:</h6>
+<p appHighlightV3 [appHighlightV3]="color">Highlight me - Used both property and directive names</p>
+<p [appHighlightV3]="color">Highlight me - Used property and directive names together.</p>
+

@@ -15,12 +15,13 @@ import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './attribute-directives/highlight.directive';
 import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
 import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
+import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive]
 })
 export class ComponentsTemplatesModule { }
