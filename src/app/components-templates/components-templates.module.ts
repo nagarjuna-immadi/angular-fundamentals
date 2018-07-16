@@ -16,12 +16,13 @@ import { HighlightDirective } from './attribute-directives/highlight.directive';
 import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
 import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
 import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive';
+import { ReverseIfDirective } from './structural-directives/reverse-if.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective]
 })
 export class ComponentsTemplatesModule { }
