@@ -1,0 +1,16 @@
+<h6><b>Component interaction</b></h6>
+<hr>
+<h6>Intercept input property changes with a setter:</h6>
+<app-hero-name [name]="currentHero.name"></app-hero-name>
+
+<br>
+<h6>Parent interacts with child via template reference variable:</h6>
+<app-countdown-parent-with-temp-ref-var></app-countdown-parent-with-temp-ref-var>
+
+<br>
+<h6>Parent calls an @ViewChild():</h6>
+<app-countdown-parent-with-view-child></app-countdown-parent-with-view-child>
+
+<br>
+<h6>Parent and children communicate via a service:</h6>
+<app-simple-todo></app-simple-todo>

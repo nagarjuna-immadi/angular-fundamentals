@@ -17,12 +17,19 @@ import { HighlightV1Directive } from './attribute-directives/highlight-v1.direct
 import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
 import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive';
 import { ReverseIfDirective } from './structural-directives/reverse-if.directive';
+import { InteractionComponent } from './interaction/interaction.component';
+import { HeroNameComponent } from './hero-name/hero-name.component';
+import { CountdownParentWithTempRefVarComponent } from './countdown-parent-with-temp-ref-var/countdown-parent-with-temp-ref-var.component';
+import { CountdownParentWithViewChildComponent } from './countdown-parent-with-view-child/countdown-parent-with-view-child.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent]
 })
 export class ComponentsTemplatesModule { }
