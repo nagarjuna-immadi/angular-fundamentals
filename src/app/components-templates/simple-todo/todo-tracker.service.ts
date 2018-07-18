@@ -12,7 +12,8 @@ export class TodoTrackerService {
   todoObservable$ = this.todoObservable.asObservable();
 
   track(todo) {
-    this.todoObservable.next(todo);
+    let action = `${todo.title} is ${todo.done ? `` : `not`} completed`;
+    this.todoObservable.next(action);
   }
 
 }

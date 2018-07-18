@@ -10,11 +10,11 @@ import { TodoTrackerService } from './todo-tracker.service';
 })
 export class SimpleTodoComponent implements OnInit {
 
-  todosModified = [];
+  userActions = [];
 
   constructor(private tracker: TodoTrackerService) {
-    this.tracker.todoObservable$.subscribe(todo => {
-      this.todosModified.push(todo);
+    this.tracker.todoObservable$.subscribe(todoAction => {
+      this.userActions.push(todoAction);
     });
   }
 
