@@ -8,9 +8,17 @@
 <app-countdown-parent-with-temp-ref-var></app-countdown-parent-with-temp-ref-var>
 
 <br>
-<h6>Parent calls an @ViewChild():</h6>
+<h6>Using @ViewChild():</h6>
 <app-countdown-parent-with-view-child></app-countdown-parent-with-view-child>
 
 <br>
 <h6>Parent and children communicate via a service:</h6>
 <app-simple-todo></app-simple-todo>
+
+<br>
+<h6>Using @ContentChild():</h6>
+<app-user-detail #detail>
+    <div>User edit form start</div>
+    <app-edit-user [user]="detail.user"></app-edit-user>
+    <div>User edit form end</div>
+</app-user-detail>
