@@ -13,6 +13,8 @@ import { CustomEventsComponent } from '../components-templates/custom-events/cus
 import { TwoWayBindingComponent } from '../components-templates/two-way-binding/two-way-binding.component';
 import { DirectivesComponent } from '../components-templates/directives/directives.component';
 import { InteractionComponent } from '../components-templates/interaction/interaction.component';
+import { LifecycleHooksComponent } from '../components-templates/lifecycle-hooks/lifecycle-hooks.component';
+import { LifecycleContentHooksComponent } from '../components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
@@ -25,6 +27,8 @@ const appRoutes: Routes = [
   { path: 'components-templates/template-syntax/two-way-binding', component:  TwoWayBindingComponent},
   { path: 'components-templates/directives', component:  DirectivesComponent},
   { path: 'components-templates/component-interaction', component:  InteractionComponent},
+  { path: 'components-templates/lifecycle-hooks', component:  LifecycleHooksComponent},
+  { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

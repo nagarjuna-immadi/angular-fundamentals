@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { DisplayDataInTemplateComponent } from './display-data-in-template/display-data-in-template.component';
 import { DisplayDataInTemplateUrlComponent } from './display-data-in-template-url/display-data-in-template-url.component';
@@ -26,12 +27,18 @@ import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { UserCycleComponent } from './user-cycle/user-cycle.component';
+import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
+import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
+import { LifecycleContentHooksComponent } from './lifecycle-content-hooks/lifecycle-content-hooks.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent, LifecycleHooksComponent, UserCycleComponent, UserAfterViewDetailComponent, UserAfterContentDetailComponent, LifecycleContentHooksComponent]
 })
 export class ComponentsTemplatesModule { }
