@@ -32,6 +32,12 @@ import { UserCycleComponent } from './user-cycle/user-cycle.component';
 import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
 import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
 import { LifecycleContentHooksComponent } from './lifecycle-content-hooks/lifecycle-content-hooks.component';
+import { StylesDemoComponent } from './style-components/styles-demo/styles-demo.component';
+import { MainUserComponent } from './style-components/main-user/main-user.component';
+import { UserActionsComponent } from './style-components/user-actions/user-actions.component';
+import { UserDetailsComponent } from './style-components/user-details/user-details.component';
+import { UserTeamComponent } from './style-components/user-team/user-team.component';
+import { UserControlsComponent } from './style-components/user-controls/user-controls.component';
 
 @NgModule({
   imports: [
@@ -39,6 +45,6 @@ import { LifecycleContentHooksComponent } from './lifecycle-content-hooks/lifecy
     FormsModule,
     RouterModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent, LifecycleHooksComponent, UserCycleComponent, UserAfterViewDetailComponent, UserAfterContentDetailComponent, LifecycleContentHooksComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent, LifecycleHooksComponent, UserCycleComponent, UserAfterViewDetailComponent, UserAfterContentDetailComponent, LifecycleContentHooksComponent, StylesDemoComponent, MainUserComponent, UserActionsComponent, UserDetailsComponent, UserTeamComponent, UserControlsComponent]
 })
 export class ComponentsTemplatesModule { }
