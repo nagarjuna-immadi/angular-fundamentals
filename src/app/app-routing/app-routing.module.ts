@@ -16,6 +16,7 @@ import { InteractionComponent } from '../components-templates/interaction/intera
 import { LifecycleHooksComponent } from '../components-templates/lifecycle-hooks/lifecycle-hooks.component';
 import { LifecycleContentHooksComponent } from '../components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
 import { StylesDemoComponent } from '../components-templates/style-components/styles-demo/styles-demo.component';
+import { InputTestComponent } from '../components-templates/input-test/input-test.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'components-templates/lifecycle-hooks', component:  LifecycleHooksComponent},
   { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent},
   { path: 'components-templates/styles-demo', component:  StylesDemoComponent},
+  { path: 'components-templates/input-test', component:  InputTestComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

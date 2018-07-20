@@ -38,6 +38,7 @@ import { UserActionsComponent } from './style-components/user-actions/user-actio
 import { UserDetailsComponent } from './style-components/user-details/user-details.component';
 import { UserTeamComponent } from './style-components/user-team/user-team.component';
 import { UserControlsComponent } from './style-components/user-controls/user-controls.component';
+import { InputTestComponent } from './input-test/input-test.component';
 
 @NgModule({
   imports: [
@@ -45,6 +46,6 @@ import { UserControlsComponent } from './style-components/user-controls/user-con
     FormsModule,
     RouterModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent, LifecycleHooksComponent, UserCycleComponent, UserAfterViewDetailComponent, UserAfterContentDetailComponent, LifecycleContentHooksComponent, StylesDemoComponent, MainUserComponent, UserActionsComponent, UserDetailsComponent, UserTeamComponent, UserControlsComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, TwoWayBindingComponent, FontSizerComponent, HeroBioComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownParentWithViewChildComponent, CountdownTimerComponent, SimpleTodoComponent, TodoDetailComponent, UserDetailComponent, EditUserComponent, LifecycleHooksComponent, UserCycleComponent, UserAfterViewDetailComponent, UserAfterContentDetailComponent, LifecycleContentHooksComponent, StylesDemoComponent, MainUserComponent, UserActionsComponent, UserDetailsComponent, UserTeamComponent, UserControlsComponent, InputTestComponent]
 })
 export class ComponentsTemplatesModule { }
