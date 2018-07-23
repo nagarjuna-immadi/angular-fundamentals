@@ -17,7 +17,14 @@ export class CountdownParentWithViewChildComponent implements AfterViewInit {
     // Redefine `seconds()` to get from the `CountdownTimerComponent.seconds` ...
     // but wait a tick first to avoid one-time devMode
     // unidirectional-data-flow-violation error
+    // ES6
     setTimeout(() => this.seconds = () => this.timerComponent.seconds, 0);
+    // ES5
+    // setTimeout(function() {
+    //   this.seconds = function() {
+    //     return this.timerComponent.seconds;
+    //   } 
+    // }, 0);
   }
 
   start() { this.timerComponent.start(); }

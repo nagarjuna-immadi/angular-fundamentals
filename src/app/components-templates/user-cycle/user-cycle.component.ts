@@ -21,7 +21,7 @@ export class UserCycleComponent implements OnInit, OnDestroy, OnChanges, DoCheck
 
   ngOnInit() {
     console.log("3. Component Created");
-    //this.userService.getUSers().subscribe(users => {});
+    //this.usersObservable = this.userService.getUSers().subscribe(users => {});
   }
 
   ngDoCheck() {
@@ -30,7 +30,7 @@ export class UserCycleComponent implements OnInit, OnDestroy, OnChanges, DoCheck
 
   ngOnDestroy() {
     console.log("5. Component Destroyed");
-    //this.userService.getUSers().unSubscribe();
+    //this.usersObservable.unSubscribe();
   }
 
 }
