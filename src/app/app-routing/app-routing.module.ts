@@ -19,6 +19,8 @@ import { StylesDemoComponent } from '../components-templates/style-components/st
 import { InputTestComponent } from '../components-templates/input-test/input-test.component';
 import { PipesComponent } from '../components-templates/pipes/pipes/pipes.component';
 
+import { ObservablesDemoComponent } from '../rx-demo/observables-demo/observables-demo.component';
+
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
 
@@ -35,6 +37,9 @@ const appRoutes: Routes = [
   { path: 'components-templates/styles-demo', component:  StylesDemoComponent},
   { path: 'components-templates/input-test', component:  InputTestComponent},
   { path: 'components-templates/pipes', component:  PipesComponent},
+
+  /* rx-demo module routes */
+  {path: 'rxjs/observables-demo', component: ObservablesDemoComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
