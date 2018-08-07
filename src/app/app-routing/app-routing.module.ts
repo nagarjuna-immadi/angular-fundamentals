@@ -20,6 +20,8 @@ import { InputTestComponent } from '../components-templates/input-test/input-tes
 import { PipesComponent } from '../components-templates/pipes/pipes/pipes.component';
 
 import { ObservablesDemoComponent } from '../rx-demo/observables-demo/observables-demo.component';
+import { SubjectDemoComponent } from '../rx-demo/subject-demo/subject-demo.component';
+import { OperatorsDemoComponent } from '../rx-demo/operators-demo/operators-demo.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
@@ -40,6 +42,8 @@ const appRoutes: Routes = [
 
   /* rx-demo module routes */
   {path: 'rxjs/observables-demo', component: ObservablesDemoComponent},
+  {path: 'rxjs/subjects-demo', component: SubjectDemoComponent},
+  {path: 'rxjs/operators-demo', component: OperatorsDemoComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
