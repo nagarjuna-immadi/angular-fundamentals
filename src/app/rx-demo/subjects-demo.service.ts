@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, Subject, from, interval } from 'rxjs';
+import { Observable, Subject, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,23 +14,19 @@ export class SubjectsDemoService {
   numbers: Array<number> = [1, 2, 3, 4, 5];
 
   numbersObservable$: Observable<number> = Observable.create(observer => {
-    let timeoutId;
-  
-    function doSequence(arr, idx) {
-      timeoutId = setTimeout(() => {
-        observer.next(arr[idx]);
-        if (idx === arr.length - 1) {
-          observer.complete();
-        } else {
-          doSequence(arr, ++idx);
-        }
-      }, 1000);
-    }
-  
-    doSequence(this.numbers, 0);
+    let id = 0;
+    let intervalId = setInterval(() => {
+      observer.next(this.numbers[id]);
+      if (id === this.numbers.length - 1) {
+        observer.complete();
+        clearInterval(intervalId);
+      } else {
+        ++id;
+      }
+    }, 1000);
   
     return {unsubscribe() {
-      clearTimeout(timeoutId);
+      clearInterval(intervalId);
     }};
   });
 
