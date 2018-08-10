@@ -7,12 +7,13 @@ import { SubjectDemoComponent } from './subject-demo/subject-demo.component';
 import { OperatorsDemoComponent } from './operators-demo/operators-demo.component';
 import { ColorfulTextComponent } from './colorful-text/colorful-text.component';
 import { ColorInputComponent } from './color-input/color-input.component';
+import { DifferentOperatorsComponent } from './different-operators/different-operators.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [ObservablesDemoComponent, SubjectDemoComponent, OperatorsDemoComponent, ColorfulTextComponent, ColorInputComponent]
+  declarations: [ObservablesDemoComponent, SubjectDemoComponent, OperatorsDemoComponent, ColorfulTextComponent, ColorInputComponent, DifferentOperatorsComponent]
 })
 export class RxDemoModule { }

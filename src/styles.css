@@ -71,4 +71,10 @@ ul.index-list li{
     padding-left: 30px;
 }
 
+ul.logs {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
 

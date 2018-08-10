@@ -22,6 +22,7 @@ import { PipesComponent } from '../components-templates/pipes/pipes/pipes.compon
 import { ObservablesDemoComponent } from '../rx-demo/observables-demo/observables-demo.component';
 import { SubjectDemoComponent } from '../rx-demo/subject-demo/subject-demo.component';
 import { OperatorsDemoComponent } from '../rx-demo/operators-demo/operators-demo.component';
+import { DifferentOperatorsComponent } from '../rx-demo/different-operators/different-operators.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent},
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
   {path: 'rxjs/observables-demo', component: ObservablesDemoComponent},
   {path: 'rxjs/subjects-demo', component: SubjectDemoComponent},
   {path: 'rxjs/operators-demo', component: OperatorsDemoComponent},
+  {path: 'rxjs/different-operators', component: DifferentOperatorsComponent},
 
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
