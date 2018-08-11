@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 import { RxDemoModule } from './rx-demo/rx-demo.module';
+import { ModulesDemoModule } from './modules-demo/modules-demo.module';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -20,7 +21,8 @@ import { IndexComponent } from './index/index.component';
     AppRoutingModule,
     NgbModule.forRoot(),
     ComponentsTemplatesModule,
-    RxDemoModule
+    RxDemoModule,
+    ModulesDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

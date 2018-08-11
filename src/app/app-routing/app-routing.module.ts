@@ -24,29 +24,39 @@ import { SubjectDemoComponent } from '../rx-demo/subject-demo/subject-demo.compo
 import { OperatorsDemoComponent } from '../rx-demo/operators-demo/operators-demo.component';
 import { DifferentOperatorsComponent } from '../rx-demo/different-operators/different-operators.component';
 
+import { LazyLoadingDemoComponent } from '../modules-demo/lazy-loading-demo/lazy-loading-demo.component';
+
 const appRoutes: Routes = [
-  { path: 'index', component:  IndexComponent},
+  { path: 'index', component:  IndexComponent },
 
   /* Components - Templates */
-  { path: 'components-templates/display-data-in-template', component:  DisplayDataInTemplateComponent},
-  { path: 'components-templates/display-data-in-template-url', component:  DisplayDataInTemplateUrlComponent},
-  { path: 'components-templates/template-syntax', component:  TemplateSyntaxComponent},
-  { path: 'components-templates/template-syntax/custom-events', component:  CustomEventsComponent},
-  { path: 'components-templates/template-syntax/two-way-binding', component:  TwoWayBindingComponent},
-  { path: 'components-templates/directives', component:  DirectivesComponent},
-  { path: 'components-templates/component-interaction', component:  InteractionComponent},
-  { path: 'components-templates/lifecycle-hooks', component:  LifecycleHooksComponent},
-  { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent},
-  { path: 'components-templates/styles-demo', component:  StylesDemoComponent},
-  { path: 'components-templates/input-test', component:  InputTestComponent},
-  { path: 'components-templates/pipes', component:  PipesComponent},
+  { path: 'components-templates/display-data-in-template', component:  DisplayDataInTemplateComponent },
+  { path: 'components-templates/display-data-in-template-url', component:  DisplayDataInTemplateUrlComponent },
+  { path: 'components-templates/template-syntax', component:  TemplateSyntaxComponent },
+  { path: 'components-templates/template-syntax/custom-events', component:  CustomEventsComponent },
+  { path: 'components-templates/template-syntax/two-way-binding', component:  TwoWayBindingComponent },
+  { path: 'components-templates/directives', component:  DirectivesComponent },
+  { path: 'components-templates/component-interaction', component:  InteractionComponent },
+  { path: 'components-templates/lifecycle-hooks', component:  LifecycleHooksComponent },
+  { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent },
+  { path: 'components-templates/styles-demo', component:  StylesDemoComponent },
+  { path: 'components-templates/input-test', component:  InputTestComponent },
+  { path: 'components-templates/pipes', component:  PipesComponent },
 
   /* rx-demo module routes */
-  {path: 'rxjs/observables-demo', component: ObservablesDemoComponent},
-  {path: 'rxjs/subjects-demo', component: SubjectDemoComponent},
-  {path: 'rxjs/operators-demo', component: OperatorsDemoComponent},
-  {path: 'rxjs/different-operators', component: DifferentOperatorsComponent},
+  { path: 'rxjs/observables-demo', component: ObservablesDemoComponent },
+  { path: 'rxjs/subjects-demo', component: SubjectDemoComponent },
+  { path: 'rxjs/operators-demo', component: OperatorsDemoComponent },
+  { path: 'rxjs/different-operators', component: DifferentOperatorsComponent },
 
+  /* rx-demo module routes */
+  { path: 'ngmodules/lazy-loading', component: LazyLoadingDemoComponent },
+
+  /* Lazy loading routes */
+  { path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
+  { path: 'orders', loadChildren: '../orders/orders.module#OrdersModule' },
+
+  /* Default path and wild match routes */  
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
