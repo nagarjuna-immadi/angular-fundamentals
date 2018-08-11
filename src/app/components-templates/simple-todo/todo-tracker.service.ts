@@ -7,13 +7,13 @@ export class TodoTrackerService {
 
   constructor() { }
 
-  private todoObservable = new Subject();
+  private todoSubject = new Subject();
 
-  todoObservable$ = this.todoObservable.asObservable();
+  todoObservable$ = this.todoSubject.asObservable();
 
   track(todo) {
     let action = `${todo.title} is ${todo.done ? `` : `not`} completed`;
-    this.todoObservable.next(action);
+    this.todoSubject.next(action);
   }
 
 }

@@ -106,7 +106,7 @@ export class ObservablesDemoComponent implements OnInit {
     customObservable2.subscribe(
       x => this.customObservable2Logs.push('got value ' + x),
       err => this.customObservable2Logs.push('something wrong occurred: ' + err),
-      () => this.customObservable2Logs.push('done'),
+      () => this.customObservable2Logs.push('done')
     ); // subscribe method with next, error, complete methods
 
     /***** Custom observalble with error method *****/

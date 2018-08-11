@@ -49,7 +49,7 @@ const appRoutes: Routes = [
   { path: 'rxjs/operators-demo', component: OperatorsDemoComponent },
   { path: 'rxjs/different-operators', component: DifferentOperatorsComponent },
 
-  /* rx-demo module routes */
+  /* NgModules routes */
   { path: 'ngmodules/lazy-loading', component: LazyLoadingDemoComponent },
 
   /* Lazy loading routes */
