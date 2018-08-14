@@ -25,6 +25,10 @@ import { OperatorsDemoComponent } from '../rx-demo/operators-demo/operators-demo
 import { DifferentOperatorsComponent } from '../rx-demo/different-operators/different-operators.component';
 
 import { LazyLoadingDemoComponent } from '../modules-demo/lazy-loading-demo/lazy-loading-demo.component';
+import { EagerVsLazyLoadingComponent } from '../modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
+
+import { CounterHomeComponent as CounterOneHomeComponent } from '../counter-one/counter-home/counter-home.component';
+import { CounterHomeComponent as CounterTwoHomeComponent } from '../counter-two/counter-home/counter-home.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent },
@@ -52,9 +56,15 @@ const appRoutes: Routes = [
   /* NgModules routes */
   { path: 'ngmodules/lazy-loading', component: LazyLoadingDemoComponent },
 
-  /* Lazy loading routes */
+  /* Lazy loading demo routes */
   { path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
   { path: 'orders', loadChildren: '../orders/orders.module#OrdersModule' },
+
+  /* Eager Vs Lazy loading demo routes */
+  { path: 'ngmodules/eager-vs-lazy-loading', component: EagerVsLazyLoadingComponent },
+  { path: 'ngmodules/eager-vs-lazy-loading/counter-one-home', component: CounterOneHomeComponent },
+  { path: 'ngmodules/eager-vs-lazy-loading/counter-two-home', component: CounterTwoHomeComponent },
+  { path: 'lazy-counter-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
 
   /* Default path and wild match routes */  
   { path: '', redirectTo: 'index', pathMatch: 'full' },

@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 
 
 import { LazyLoadingDemoComponent } from './lazy-loading-demo/lazy-loading-demo.component';
+import { EagerVsLazyLoadingComponent } from './eager-vs-lazy-loading/eager-vs-lazy-loading.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule
   ],
-  declarations: [LazyLoadingDemoComponent]
+  declarations: [LazyLoadingDemoComponent, EagerVsLazyLoadingComponent]
 })
 export class ModulesDemoModule { }
