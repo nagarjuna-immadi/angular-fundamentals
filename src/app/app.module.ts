@@ -26,7 +26,7 @@ import { IndexComponent } from './index/index.component';
     ComponentsTemplatesModule,
     RxDemoModule,
     ModulesDemoModule,
-    CounterOneModule,
+    CounterOneModule.forRoot(),
     CounterTwoModule
   ],
   providers: [],
