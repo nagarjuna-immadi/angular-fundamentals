@@ -11,6 +11,8 @@ import { ModulesDemoModule } from './modules-demo/modules-demo.module';
 import { CounterOneModule } from './counter-one/counter-one.module';
 import { CounterTwoModule } from './counter-two/counter-two.module';
 
+import { CoreModule } from './core/core.module';
+
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 
@@ -27,7 +29,8 @@ import { IndexComponent } from './index/index.component';
     RxDemoModule,
     ModulesDemoModule,
     CounterOneModule.forRoot(),
-    CounterTwoModule
+    CounterTwoModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
