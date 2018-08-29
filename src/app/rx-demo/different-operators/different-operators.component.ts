@@ -107,7 +107,7 @@ export class DifferentOperatorsComponent implements OnInit {
 
     startedWith$.subscribe(val => this.startWithLogs.push(val));
 
-    /******* startWith operator *********/    
+    /******* withLatestFrom operator *********/    
     //emit every 5s
     const source = interval(5000);
     //emit every 1s
