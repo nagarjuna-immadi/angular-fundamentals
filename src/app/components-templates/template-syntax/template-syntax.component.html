@@ -30,14 +30,15 @@
 <app-hero-detail [hero]="currentHero"></app-hero-detail>
 <br />
 
-<!-- Here 'hero' property is initialised with 'currentHero' string. If we use square brackets then only template expression will be evaluated -->
-<app-hero-detail hero="currentHero"></app-hero-detail>
-<br />
-
 <h6>Usign function call in bindings:</h6>
 <img src="{{getHeroImage()}}" style="height:50px" />
 <img [src]="getHeroImage()" style="height:50px" />
 <br /><br />
+
+<!-- Here 'hero' property is initialised with 'currentHero' string. If we use square brackets then only template expression will be evaluated -->
+<app-hero-detail hero="currentHero"></app-hero-detail>
+<br />
+
 
 <h6>Script tags in property bindings:</h6>
 <p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>

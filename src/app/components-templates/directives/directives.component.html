@@ -31,7 +31,7 @@
 
 
 <div *ngIf="nullHero" class="name">{{nullHero.name}}</div>
-<!-- <div [style.display]="nullHero ? 'block': 'none'">{{nullHero.name}}</div> -->
+<div [style.display]="nullHero ? 'block': 'none'">{{nullHero?.name}}</div>
 
 <br>
 <h6>*ngFor:</h6>
