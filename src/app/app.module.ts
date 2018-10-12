@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,6 +13,8 @@ import { CounterOneModule } from './counter-one/counter-one.module';
 import { CounterTwoModule } from './counter-two/counter-two.module';
 
 import { CoreModule } from './core/core.module';
+import { FormsDemoModule } from './forms-demo/forms-demo.module';
+
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -23,6 +26,7 @@ import { IndexComponent } from './index/index.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbModule.forRoot(),
     ComponentsTemplatesModule,
@@ -30,7 +34,8 @@ import { IndexComponent } from './index/index.component';
     ModulesDemoModule,
     CounterOneModule.forRoot(),
     CounterTwoModule,
-    CoreModule
+    CoreModule,
+    FormsDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

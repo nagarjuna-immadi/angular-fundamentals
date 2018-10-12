@@ -30,6 +30,11 @@ import { EagerVsLazyLoadingComponent } from '../modules-demo/eager-vs-lazy-loadi
 import { CounterHomeComponent as CounterOneHomeComponent } from '../counter-one/counter-home/counter-home.component';
 import { CounterHomeComponent as CounterTwoHomeComponent } from '../counter-two/counter-home/counter-home.component';
 
+import { FormControlComponent } from '../forms-demo/reactive/form-control/form-control.component';
+import { FormGroupComponent } from '../forms-demo/reactive/form-group/form-group.component';
+import { FormBuilderComponent } from '../forms-demo/reactive/form-builder/form-builder.component';
+import { FormArrayComponent } from '../forms-demo/reactive/form-array/form-array.component';
+
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent },
 
@@ -65,6 +70,12 @@ const appRoutes: Routes = [
   { path: 'ngmodules/eager-vs-lazy-loading/counter-one-home', component: CounterOneHomeComponent },
   { path: 'ngmodules/eager-vs-lazy-loading/counter-two-home', component: CounterTwoHomeComponent },
   { path: 'lazy-counter-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
+
+  /* Forms demo routes */
+  { path: 'forms/reactive/form-control', component: FormControlComponent },
+  { path: 'forms/reactive/form-group', component: FormGroupComponent },
+  { path: 'forms/reactive/form-builder', component: FormBuilderComponent },
+  { path: 'forms/reactive/form-array', component: FormArrayComponent },
 
   /* Default path and wild match routes */  
   { path: '', redirectTo: 'index', pathMatch: 'full' },
