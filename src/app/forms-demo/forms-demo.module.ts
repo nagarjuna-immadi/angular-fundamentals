@@ -6,12 +6,13 @@ import { FormControlComponent } from './reactive/form-control/form-control.compo
 import { FormGroupComponent } from './reactive/form-group/form-group.component';
 import { FormBuilderComponent } from './reactive/form-builder/form-builder.component';
 import { FormArrayComponent } from './reactive/form-array/form-array.component';
+import { NestedFormGroupComponent } from './reactive/nested-form-group/nested-form-group.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
-  declarations: [FormControlComponent, FormGroupComponent, FormBuilderComponent, FormArrayComponent]
+  declarations: [FormControlComponent, FormGroupComponent, FormBuilderComponent, FormArrayComponent, NestedFormGroupComponent]
 })
 export class FormsDemoModule { }

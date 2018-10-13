@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
 
-  name = new FormControl('John');  
+  name = new FormControl('');  
 
   constructor() { }
 

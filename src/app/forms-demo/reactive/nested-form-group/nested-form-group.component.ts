@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-form-builder',
-  templateUrl: './form-builder.component.html',
-  styleUrls: ['./form-builder.component.css']
+  selector: 'app-nested-form-group',
+  templateUrl: './nested-form-group.component.html',
+  styleUrls: ['./nested-form-group.component.css']
 })
-export class FormBuilderComponent implements OnInit {
+export class NestedFormGroupComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit() {
     this.profileFormGroup.valueChanges.subscribe(changesObj => {
@@ -16,15 +16,15 @@ export class FormBuilderComponent implements OnInit {
     });
   }
 
-  profileFormGroup = this.fb.group({
-    firstName: ['', Validators.required],
-    lastName: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
+  profileFormGroup = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    address: new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl(''),
+      zip: new FormControl('')
+    })
   });
 
   onSubmit() {
