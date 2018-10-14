@@ -67,4 +67,11 @@ export class TemplateSyntaxComponent implements OnInit {
   onSubmit(heroForm) {
     console.log(heroForm);
   }
+
+  updateHero() {
+    this.currentHero = {
+      name: "John",
+      power: 500
+    };
+  }
 }
