@@ -36,6 +36,8 @@ import { NestedFormGroupComponent } from '../forms-demo/reactive/nested-form-gro
 import { FormBuilderComponent } from '../forms-demo/reactive/form-builder/form-builder.component';
 import { FormArrayComponent } from '../forms-demo/reactive/form-array/form-array.component';
 import { SuperHeroComponent } from '../forms-demo/template-driven/super-hero/super-hero.component';
+import { ReactiveFormValidationComponent } from '../forms-demo/reactive/reactive-form-validation/reactive-form-validation.component';
+import { TemplateDrivenFormValidationComponent } from '../forms-demo/template-driven/template-driven-form-validation/template-driven-form-validation.component';
 
 const appRoutes: Routes = [
   { path: 'index', component:  IndexComponent },
@@ -80,6 +82,8 @@ const appRoutes: Routes = [
   { path: 'forms/reactive/form-builder', component: FormBuilderComponent },
   { path: 'forms/reactive/form-array', component: FormArrayComponent },
   { path: 'forms/template-driven', component: SuperHeroComponent },
+  { path: 'forms/validation/reactive', component: ReactiveFormValidationComponent },
+  { path: 'forms/validation/template-driven', component: TemplateDrivenFormValidationComponent },
 
   /* Default path and wild match routes */  
   { path: '', redirectTo: 'index', pathMatch: 'full' },

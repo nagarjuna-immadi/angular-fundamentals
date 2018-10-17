@@ -15,6 +15,7 @@ import { CounterTwoModule } from './counter-two/counter-two.module';
 
 import { CoreModule } from './core/core.module';
 import { FormsDemoModule } from './forms-demo/forms-demo.module';
+import { SharedModule } from './shared/shared.module';
 
 
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ import { IndexComponent } from './index/index.component';
     CounterOneModule.forRoot(),
     CounterTwoModule,
     CoreModule,
-    FormsDemoModule
+    FormsDemoModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

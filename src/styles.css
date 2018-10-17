@@ -78,3 +78,14 @@ ul.logs {
 }
 
 
+.fundamentals-form .alert.alert-danger {
+    margin-top: 10px;
+}
+
+.fundamentals-form .ng-valid.ng-touched:not(form)  {
+    border: 1px solid #42A948; /* green */
+}
+
+.fundamentals-form .ng-invalid.ng-touched:not(form)  {
+    border: 1px solid #a94442; /* red */
+}
