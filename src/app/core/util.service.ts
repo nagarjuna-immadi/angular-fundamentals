@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,13 @@ export class UtilService {
   updateUSerName(userName: string) {
     this.userNameSubject.next(userName);
   }
+
+  checkUniqueUserName(userName: string) {
+    let existingUserNames = ['batMan', 'antMan', 'spiderMan', 'superMan'];
+    let isExists = existingUserNames.indexOf(userName) > -1 ? true : false;
+
+    return of(isExists).pipe(delay(6000));
+  }
+
 
 }

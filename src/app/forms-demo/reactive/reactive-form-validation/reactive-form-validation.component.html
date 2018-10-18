@@ -112,6 +112,9 @@
         <div *ngIf="nickName.errors.required">
           Nick name is required.
         </div>
+        <div *ngIf="nickName.errors.forbiddenName">
+          {{ nickName.errors.forbiddenName.value }} is not allowed as nick name. 
+        </div>
       </div>
     </div>
 
@@ -119,9 +122,13 @@
       <label for="userName">User Name</label>
       <input id="userName" class="form-control" formControlName="userName">
 
+      <div *ngIf="userName.pending">Validating....</div>
       <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
         <div *ngIf="userName.errors.required">
           User name is required.
+        </div>
+        <div *ngIf="userName.errors.uniqueUserName">
+          {{ userName.errors.uniqueUserName }} is already taken. Please choose another.
         </div>
       </div>
     </div>
@@ -134,7 +141,7 @@
       </div>
     </div> -->
 
-    <button type="submit" class="btn btn-default" [disabled]="heroFormGroup.invalid">Submit</button> &nbsp;&nbsp;
+    <button type="submit" class="btn btn-default" [disabled]="heroFormGroup.invalid || heroFormGroup.status == 'PENDING'">Submit</button> &nbsp;&nbsp;
     <button type="button" class="btn btn-default" (click)="heroFormGroup.reset()">Reset</button>
   </form>
 </div>

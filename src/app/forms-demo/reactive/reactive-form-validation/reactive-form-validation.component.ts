@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
+import { forbiddenNameValidator } from '../../../shared/validators/forbidden-name.validator';
+import { UniqueUserNameValidator } from '../../../shared/validators/unique-user-name.async-validator';
 
 @Component({
   selector: 'app-reactive-form-validation',
@@ -8,7 +10,7 @@ import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@ang
 })
 export class ReactiveFormValidationComponent implements OnInit {
   
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private uniqueUserNameValidator: UniqueUserNameValidator) { }
 
   powers = ['Really Smart', 'Super Flexible', 'Weather Changer'];
 
@@ -29,8 +31,8 @@ export class ReactiveFormValidationComponent implements OnInit {
       'email': ['', [Validators.required, Validators.email]],
       'seconderyEmail': ['', [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
       'available': ['', Validators.required],
-      'nickName': ['', [Validators.required]], // Add forbidden names custom validator here
-      'userName': ['', [Validators.required]], // Add Async validator to check username availability
+      'nickName': ['', [Validators.required, forbiddenNameValidator(['Bob', 'Tim', 'Tommy'])]],
+      'userName': ['', [Validators.required], this.uniqueUserNameValidator.validate.bind(this.uniqueUserNameValidator)],
       // 'vehicles': this.buildVehicleCheckBoxControls(),
     });
 
