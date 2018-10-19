@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 import { forbiddenNameValidator } from '../../../shared/validators/forbidden-name.validator';
 import { UniqueUserNameValidator } from '../../../shared/validators/unique-user-name.async-validator';
+import { checkboxRequiredValidator } from '../../../shared/validators/checkbox-required.validator';
 
 @Component({
   selector: 'app-reactive-form-validation',
@@ -14,7 +15,7 @@ export class ReactiveFormValidationComponent implements OnInit {
 
   powers = ['Really Smart', 'Super Flexible', 'Weather Changer'];
 
-  vehicles = [
+  vehiclesArr = [
     {label:"Two Wheeler", value: 'two-wheeler', selected: false},
     {label:"Four Wheeler", value: 'four-wheeler', selected: false},
     {label:"Private Chopper", value: 'private-chopper', selected: false},
@@ -33,7 +34,7 @@ export class ReactiveFormValidationComponent implements OnInit {
       'available': ['', Validators.required],
       'nickName': ['', [Validators.required, forbiddenNameValidator(['Bob', 'Tim', 'Tommy'])]],
       'userName': ['', [Validators.required], this.uniqueUserNameValidator.validate.bind(this.uniqueUserNameValidator)],
-      // 'vehicles': this.buildVehicleCheckBoxControls(),
+      'vehicles': this.buildVehicleCheckBoxControls(),
     });
 
     this.heroFormGroup.valueChanges.subscribe(changesObj => {
@@ -43,12 +44,12 @@ export class ReactiveFormValidationComponent implements OnInit {
 
   buildVehicleCheckBoxControls() {
     let vehicleCheckBoxControls = [];
-    this.vehicles.forEach(vehicle => {
+    this.vehiclesArr.forEach(vehicle => {
       let control = this.fb.control(vehicle.selected);
       vehicleCheckBoxControls.push(control);
     });
 
-    return new FormArray(vehicleCheckBoxControls, Validators.required);
+    return new FormArray(vehicleCheckBoxControls, checkboxRequiredValidator());
   }
 
   get name() { return this.heroFormGroup.get('name'); }
@@ -67,10 +68,23 @@ export class ReactiveFormValidationComponent implements OnInit {
 
   get userName() { return this.heroFormGroup.get('userName'); }
 
-  // get vehicleControls() { return this.heroFormGroup.get('vehicles'); }
+  get vehicles() { return this.heroFormGroup.get('vehicles'); }
 
   onSubmit() {
     console.log(this.heroFormGroup.value);
+    let payload = { ...this.heroFormGroup.value };
+    payload.vehicles = this.getVehicleValues(payload.vehicles);
+    console.log(payload);
+  }
+
+  getVehicleValues(checkboxValues: Boolean[]) {
+    let values: string[] = [];
+    checkboxValues.forEach((val, index) => {
+      if(val) {
+        values.push(this.vehiclesArr[index].value);
+      }
+    });
+    return values;
   }
 
 }
