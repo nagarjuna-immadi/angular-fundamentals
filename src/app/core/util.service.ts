@@ -22,7 +22,7 @@ export class UtilService {
     let existingUserNames = ['batMan', 'antMan', 'spiderMan', 'superMan'];
     let isExists = existingUserNames.indexOf(userName) > -1 ? true : false;
 
-    return of(isExists).pipe(delay(6000));
+    return of(isExists).pipe(delay(3000));
   }
 
 

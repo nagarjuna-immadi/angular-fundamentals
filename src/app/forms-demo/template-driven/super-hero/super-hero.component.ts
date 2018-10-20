@@ -12,8 +12,7 @@ export class SuperHeroComponent implements OnInit {
   ngOnInit() {
   }
 
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+  powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
 
   hero = {
     name: '',

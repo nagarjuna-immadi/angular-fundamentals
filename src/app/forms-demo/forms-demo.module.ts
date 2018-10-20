@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { FormControlComponent } from './reactive/form-control/form-control.component';
 import { FormGroupComponent } from './reactive/form-group/form-group.component';
 import { FormBuilderComponent } from './reactive/form-builder/form-builder.component';
@@ -16,7 +18,8 @@ import { TemplateDrivenFormValidationComponent } from './template-driven/templat
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [FormControlComponent, FormGroupComponent, FormBuilderComponent, FormArrayComponent, NestedFormGroupComponent, SuperHeroComponent, ReactiveFormValidationComponent, TemplateDrivenFormValidationComponent]
 })
