@@ -12,6 +12,8 @@ export class TemplateSyntaxComponent implements OnInit {
     power: 200
   };
 
+  phone = "976543213";
+
   heroImageUrl = './assets/images/hero.jpg';
 
   formNotChanged = true;
