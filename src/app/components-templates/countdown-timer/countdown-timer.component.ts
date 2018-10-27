@@ -6,7 +6,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./countdown-timer.component.css']
 })
 export class CountdownTimerComponent implements OnInit, OnDestroy {
-
+  
   intervalId = 0;
   message = '';
   seconds = 11;
