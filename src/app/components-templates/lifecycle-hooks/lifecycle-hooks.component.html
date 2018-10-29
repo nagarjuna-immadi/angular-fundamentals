@@ -7,12 +7,12 @@
 <input type="text" [(ngModel)]="currentUser.name" />
 
 <br><br>
-<app-user-cycle  *ngIf="created" [user]="currentUser"></app-user-cycle>
+<app-user-cycle *ngIf="created" [user]="currentUser"></app-user-cycle>
 
 <br>
 <h6><b>ngAfterViewInit(), ngAfterViewChecked()</b></h6>
-<app-user-after-view-detail></app-user-after-view-detail>
+<a [routerLink]="['/components-templates/lifecycle-hooks/view-hooks']">Click Here for View Hooks Example</a>
 
-<br>
+<br><br>
 <h6><b>ngAfterContentInit(), ngAfterContentChecked()</b></h6>
 <a [routerLink]="['/components-templates/lifecycle-hooks/content-hooks']">Click Here for Content Hooks Example</a>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, DoCheck, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
@@ -6,12 +6,9 @@ import { EditUserComponent } from '../edit-user/edit-user.component';
   templateUrl: './user-after-view-detail.component.html',
   styleUrls: ['./user-after-view-detail.component.css']
 })
-export class UserAfterViewDetailComponent implements OnInit, AfterViewInit, AfterViewChecked {
+export class UserAfterViewDetailComponent implements OnInit, DoCheck, AfterViewInit, AfterViewChecked {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   user = {
     name: 'John',
@@ -19,6 +16,14 @@ export class UserAfterViewDetailComponent implements OnInit, AfterViewInit, Afte
   };
 
   @ViewChild(EditUserComponent) editUserView: EditUserComponent;
+
+  ngOnInit() {
+    // console.log(this.editUserView.user.name);
+  }
+
+  ngDoCheck() {
+    console.log("Do Check Called...!");
+  }
 
   ngAfterViewInit() {
     console.log("ngAfterViewInit");

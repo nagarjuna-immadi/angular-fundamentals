@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild, AfterContentInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, ContentChild, AfterContentInit, AfterContentChecked, DoCheck } from '@angular/core';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { EditUserComponent } from '../edit-user/edit-user.component';
   templateUrl: './user-after-content-detail.component.html',
   styleUrls: ['./user-after-content-detail.component.css']
 })
-export class UserAfterContentDetailComponent implements OnInit, AfterContentInit, AfterContentChecked {
+export class UserAfterContentDetailComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked {
 
   constructor() { }
 
@@ -19,6 +19,10 @@ export class UserAfterContentDetailComponent implements OnInit, AfterContentInit
   };
 
   @ContentChild(EditUserComponent) editUserContent: EditUserComponent;
+
+  ngDoCheck() {
+    console.log("Do Check Called...!");
+  }
 
   ngAfterContentInit() {
     console.log("ngAfterContentInit");
