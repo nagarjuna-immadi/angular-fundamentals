@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-  birthday = new Date(1988, 3, 15);
+  birthday = new Date(1995, 3, 15);
 
   constructor() { }
 
