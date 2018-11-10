@@ -24,10 +24,6 @@ export class SubjectsDemoService {
         ++id;
       }
     }, 1000);
-  
-    return {unsubscribe() {
-      clearInterval(intervalId);
-    }};
   });
 
   numbersSubject = new Subject<number>();
