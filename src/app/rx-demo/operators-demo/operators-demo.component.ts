@@ -49,7 +49,7 @@ export class OperatorsDemoComponent implements OnInit {
 
     // Configured multiplyByGiven operator and it returned a function
     let multiplyByGivenFunc = multiplyByGiven(10);
-    // Applied squareValuesMapFunc to numbersObservable. Returned new observable.
+    // Applied multiplyByGiven to numbersObservable. Returned new observable.
     let multipliedNumbersObservable = multiplyByGivenFunc(numbersObservable);
     
     // Subscribed to multipliedNumbersObservable
