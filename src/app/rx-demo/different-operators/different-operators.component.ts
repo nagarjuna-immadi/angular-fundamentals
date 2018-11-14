@@ -143,7 +143,7 @@ export class DifferentOperatorsComponent implements OnInit {
     
     events$.subscribe(event => this.debounceTimeLogs.push(inputElem.value));
 
-    /******* distincct & distinctUntilChanged operator *********/
+    /******* distinct & distinctUntilChanged operator *********/
     const duplicates$ = from([1, 1, 2, 2, 3, 1, 2, 3]);
 
     duplicates$.pipe(
