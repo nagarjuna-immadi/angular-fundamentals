@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { forbiddenNameValidator } from '../../../shared/validators/forbidden-name.validator';
 import { UniqueUserNameValidator } from '../../../shared/validators/unique-user-name.async-validator';
 import { checkboxRequiredValidator } from '../../../shared/validators/checkbox-required.validator';
@@ -38,7 +38,7 @@ export class ReactiveFormValidationComponent implements OnInit {
     });
 
     this.heroFormGroup.valueChanges.subscribe(changesObj => {
-      console.log(this.heroFormGroup);
+      console.log(this.heroFormGroup.get('vehicles'));
     });
   }
 
