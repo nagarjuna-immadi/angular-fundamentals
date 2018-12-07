@@ -4,6 +4,11 @@
 <div>With pipe: {{ birthday | date }}</div>
 <div>With pipe and parameter: {{ birthday | date:'MM/dd/yy' }}</div>
 <div>With pipe chaining: {{ birthday | date | uppercase }}</div>
+<div>json pipe:</div>
+<pre>
+{{ heroes | json }}
+</pre>
+
 
 <br>
 <h6>Custom Pipes</h6>
