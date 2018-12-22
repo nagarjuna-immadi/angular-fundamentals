@@ -34,8 +34,6 @@ export class UserAfterContentDetailComponent implements OnInit, DoCheck, AfterCo
     console.log("ngAfterContentChecked");
     console.log(this.editUserContent.user.name);
     console.log(this.editUserContent.user.age);
-    this.user.name = this.editUserContent.user.name;
-    this.user.age = this.editUserContent.user.age;
   }
 
 }

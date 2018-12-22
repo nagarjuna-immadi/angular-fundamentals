@@ -22,8 +22,6 @@ export class UserDetailComponent implements OnInit, AfterContentChecked {
 
   ngAfterContentChecked() {
     console.log(this.editUserContent.user.name);
-    this.user.name = this.editUserContent.user.name;
-    this.user.age = this.editUserContent.user.age;
   }
 
 }
