@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-group',
@@ -17,7 +17,7 @@ export class FormGroupComponent implements OnInit {
   }
 
   profileFormGroup = new FormGroup({
-    firstName: new FormControl(''),
+    firstName: new FormControl('', Validators.required),
     lastName: new FormControl('')
   });
 

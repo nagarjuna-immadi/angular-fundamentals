@@ -7,7 +7,6 @@ import { UtilService } from './util.service';
   imports: [
     CommonModule
   ],
-  providers: [UtilService],
-
+  providers: [UtilService]
 })
 export class CoreModule { }

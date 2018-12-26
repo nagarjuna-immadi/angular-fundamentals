@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-control',
@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
 
-  name = new FormControl('');  
+  name = new FormControl('', Validators.required);  
 
   constructor() { }
 

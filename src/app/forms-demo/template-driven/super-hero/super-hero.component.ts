@@ -20,10 +20,12 @@ export class SuperHeroComponent implements OnInit {
     power: ''
   };
 
-  onSubmit(form) {
+  onSubmit(heroForm) {
     console.log(this.hero);
-    console.log(form.controls);
-    console.log(form.controls.name.value);
+    console.log(heroForm);
+    console.log(heroForm.valid);
+    console.log(heroForm.controls);
+    console.log(heroForm.controls.name.value);
   }
 
 }
